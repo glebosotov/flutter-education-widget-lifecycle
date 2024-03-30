@@ -32,13 +32,17 @@ class MyApp extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
-                const Expanded(child: StatelessDemo()),
+                const Expanded(
+                  child: StatelessDemo(),
+                ),
                 Expanded(
-                    child: ValueListenableBuilder(
-                        valueListenable: count,
-                        builder: (context, value, child) {
-                          return StatefulDemo(count: value);
-                        })),
+                  child: ValueListenableBuilder(
+                    valueListenable: count,
+                    builder: (context, value, child) {
+                      return StatefulDemo(count: value);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
