@@ -58,6 +58,7 @@ class StatelessDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('StatelessDemo build');
+    final theme = Theme.of(context);
     return const Center(child: Text('Some text'));
   }
 }
